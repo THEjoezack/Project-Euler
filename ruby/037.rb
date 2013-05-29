@@ -1,4 +1,4 @@
-load 'prime_generator.rb'
+load 'lib\prime_generator.rb'
 
 def prime? n, truncate
   return false if !$primer.is_prime?(n)

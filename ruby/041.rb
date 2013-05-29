@@ -1,5 +1,5 @@
-require './prime_generator'
-require './permuter'
+require 'lib\prime_generator'
+require 'lib\permuter'
 
 # Ugh
 start = 987_654_321

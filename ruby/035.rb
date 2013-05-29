@@ -1,4 +1,4 @@
-require 'prime_generator'
+require 'lib\prime_generator'
 
 primer = Prime_Generator.new 1_000_000
 

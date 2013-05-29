@@ -1,4 +1,4 @@
-require 'prime_generator'
+require 'lib\prime_generator'
 
 # pre-calculate primes
 MAX     = 1_000
