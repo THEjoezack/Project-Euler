@@ -6,14 +6,10 @@ class Prime_Generator
     @stack  = [1,2,3]
     fill_to max  
   end  
-  
-  def fill_to max  
-    n = 1  
-    while true do  
-      n += 4  
-      return @stack if n > max  
-      @stack << n if is_prime? n  
-  
+
+  def fill_to max
+    n = @stack.last
+    while true do
       n += 2  
       return @stack if n > max  
       @stack << n if is_prime? n  
@@ -21,12 +17,7 @@ class Prime_Generator
   end  
   
   def is_prime? n
-    return false if n == 1
-    is_really_prime? n
-  end
-
-  def is_really_prime? n
-    return false if n <= 0
+    return false if n == 1 || n <= 0
     max = Math.sqrt(n).floor  
     fill_to(max + 1) if max > @stack.last  
   
