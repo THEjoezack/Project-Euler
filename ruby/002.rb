@@ -8,27 +8,11 @@
 # sequence which do not exceed four million.
 
 max    = 4_000_000
-total  = 0
-$stack = []
+fib,last,sum = 1,1,0
 
-def fib n
-  if n == 0
-    return 1
-  end
-  if n == 1
-    return 2
-  end
-  return $stack[n - 1] + $stack[n - 2]
+while fib < 4_000_000 do
+  fib, last = fib + last, fib
+  sum += fib if fib % 2 == 0
 end
 
-max.times do |i|
-  $stack[i] = fib i
-  if $stack[i] > max
-    break
-  end
-  if $stack[i] & 1 == 0
-    total += $stack[i]
-  end
-end
-
-puts total
+puts sum
