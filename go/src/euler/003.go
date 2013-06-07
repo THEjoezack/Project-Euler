@@ -13,7 +13,7 @@ func main() {
 	for i := max; i > 0; i-- {
 		if target%i == 0 && p.IsPrime(i) {
 			fmt.Println(i)
-			break
+			return
 		}
 	}
 }
