@@ -1,0 +1,11 @@
+{
+    "folders": [
+        {
+            "path": "/E/projects/Project-Euler/go"
+        }
+    ], 
+    "settings": {
+        "go_project": true, 
+        "name": "projectEuler"
+    }
+}
