@@ -4,24 +4,15 @@
 // What is the smallest number that is evenly divisible by all of the numbers from 1 to 20?
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"euler/lib"
+)
 
 func main() {
-	primes := []int{19,17,13,11,7,5,3,2} // primes < 20
-	current := 2520 // has to be > the given for 10
-	for {
-		found := true
-		for i := 0; i < len(primes); i++ {
-			if current % primes[i] == 0 {
-				continue
-			}
-			found = false	
-			break
-		}
-		if found {
-			break	
-		}
-		current += 1
+	var n,i uint64 = 2520,11
+	for i = 11; i <= 20; i++ {
+		n = lib.Lcm(n,i)
 	}
-	fmt.Println(current)
+	fmt.Println(n)
 }
