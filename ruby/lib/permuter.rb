@@ -23,7 +23,7 @@ class Permuter
     digits[k],digits[l] = digits[l],digits[k]
 
     #Reverse the sequence from a[k + 1] up to and including the final element a[n].
-    a_to_i(digits[0,k + 1] + digits[k + 1, digits.length - k].reverse)
+    join(digits[0,k + 1] + digits[k + 1, digits.length - k].reverse)
   end
 
   def next_desc n
@@ -51,11 +51,11 @@ class Permuter
     digits[k],digits[l] = digits[l],digits[k]
 
     #Reverse the sequence from a[k + 1] up to and including the final element a[n].
-    a_to_i(digits[0,k + 1] + digits[k + 1, digits.length - k].reverse)
+    join(digits[0,k + 1] + digits[k + 1, digits.length - k].reverse)
   end
 
   :private
-  def a_to_i a
-    a.join.to_s.to_i
+  def join a
+    a.join.to_s
   end
 end
