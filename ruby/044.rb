@@ -25,8 +25,7 @@ is_pentagonal? 10_000_000
 for k in 0..($pentagonals.count - 1) do
 	for j in (k + 1)..($pentagonals.count - 1) do
 		if is_pentagonal?($pentagonals[j] - $pentagonals[k]) && is_pentagonal?($pentagonals[k] + $pentagonals[j])
-			puts $pentagonals[k]
-			puts $pentagonals[j]
+			puts ($pentagonals[j] - $pentagonals[k]).to_s
 			exit
 		end
 	end
