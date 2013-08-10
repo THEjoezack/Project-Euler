@@ -1,4 +1,4 @@
-require './lib/permuter'
+require './lib/primer'
 
 def is_special? nums
 	chars = nums.to_s.split('')
