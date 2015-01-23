@@ -1,11 +1,6 @@
-(define (problem sum i count)
+((define (problem sum i max)
   (define (divides divisor) (= 0 (modulo i divisor)))
-  (define (divisible) (or (divides 5) (divides 3)))
-  (if (= 0 count)
-    sum
-    (problem
-      (if (divisible) (+ i sum) sum)
-      (+ i 1)
-      (- count 1))))
+  (define (get-sum) (if (or (divides 5) (divides 3)) (+ i sum) sum))
+  (if (= i max) sum (problem (get-sum) (+ i 1) max)))
 
-(problem 0 1 999)
+(problem 0 1 1000)
