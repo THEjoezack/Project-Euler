@@ -9,3 +9,5 @@
 import Foundation
 
 println(P001().run());
+
+println(P002().run());
